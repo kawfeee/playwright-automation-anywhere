@@ -2,6 +2,7 @@ import { expect, test } from '@playwright/test';
 import LoginPage from '../pages/LoginPage.js';
 import DashboardPage from '../pages/DashboardPage.js';
 import FormsPage from '../pages/FormsPage.js';
+import RulesPage from '../pages/RulesPage.js';
 
 test.describe('Login flow', () => {
   test('User can login successfully', async ({ page }) => {
@@ -55,6 +56,11 @@ test.describe('Login flow', () => {
       1,
     );
 
+    // Switch to the rules tab and create Rule 1 only.
+    const rulesPage = new RulesPage(page);
+    await rulesPage.createRule();
+
+    // Save the form after the textbox and rule configuration is complete.
     await formsPage.saveForm();
 
     // Placeholder assertion for the Create Form page until the final application-specific check is defined.
