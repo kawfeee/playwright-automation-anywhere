@@ -4,14 +4,18 @@ export default class DashboardPage {
   }
 
   async clickAutomation() {
-    // TODO: Insert Playwright Codegen locator for Automation here.
+    await this.page.getByRole('link', { name: 'Automation', exact: true }).click();
+  }
+
+  async clickCreate() {
+    await this.page.getByRole('button', { name: 'Create', description: 'Create' }).click();
   }
 
   async clickForms() {
-    // TODO: Insert Playwright Codegen locator for Forms here.
+    await this.page.getByRole('button', { name: ' Form…' }).click();
   }
 
   async clickCreateForm() {
-    // TODO: Insert Playwright Codegen locator for Create Form here.
+    await this.page.getByRole('button', { name: 'Create & edit' }).click();
   }
 }
