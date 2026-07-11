@@ -1,3 +1,7 @@
 to open playwright codegen: npx playwright codegen https://community.cloud.automationanywhere.digital/
 to test a specific test file: npx playwright test firsttest.spec.js --headed 
 to show report: npx playwright show-report 
+
+
+
+await page.getByRole('textbox', { name: 'Name' }).click();
