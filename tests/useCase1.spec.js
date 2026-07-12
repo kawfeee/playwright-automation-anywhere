@@ -66,7 +66,5 @@ test.describe('Login flow', () => {
     // Placeholder assertion for the Create Form page until the final application-specific check is defined.
     await expect(page).toHaveURL(/#/);
 
-    // TODO: Replace the placeholder assertion with a Create Form page-specific check.
-    // TODO: Add a negative-path assertion if invalid credentials need coverage later.
   });
 });
